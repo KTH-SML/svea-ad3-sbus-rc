@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "svea-ad3-sbus-rc"
+version = "0.1.0"
+description = "Analog Discovery 3 SBUS RC emulator and verifier for the SVEA PX4 profile"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pygame>=2.6",
+]
+
+[project.scripts]
+svea-ad3-sbus = "svea_ad3_sbus.sbus:main"
+svea-ad3-sbus-ui = "svea_ad3_sbus.ui:main"
+svea-ad3-sbus-verify = "svea_ad3_sbus.verify:main"
+svea-ad3-dio-test = "svea_ad3_sbus.staged_test:main"
+svea-ad3-dwf-diag = "svea_ad3_sbus.dwf_diag:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
