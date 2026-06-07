@@ -21,15 +21,15 @@ The generator is matched to the local SVEA PX4 Autopilot source:
 
 Channel layout:
 
-| Channel | Control | Meaning |
-| --- | --- | --- |
-| CH1 | Steering | 1000..2000 us |
-| CH2 | Throttle | 1000..2000 us |
-| CH3 | VR dial | misc servo absolute dial |
-| CH4 | SWA | gear button |
-| CH5 | SWB | left MAVROS, mid RC-only, right kill |
-| CH6 | SWC | misc0, none, misc1 selector |
-| CH7 | SWD | arm button |
+| Channel | Control  | Meaning                              |
+| ------- | -------- | ------------------------------------ |
+| CH1     | Steering | 1000..2000 us                        |
+| CH2     | Throttle | 1000..2000 us                        |
+| CH3     | VR dial  | misc servo absolute dial             |
+| CH4     | SWA      | gear button                          |
+| CH5     | SWB      | left MAVROS, mid RC-only, right kill |
+| CH6     | SWC      | misc0, none, misc1 selector          |
+| CH7     | SWD      | arm button                           |
 
 ## Install
 
@@ -42,7 +42,6 @@ ls -l /Library/Frameworks/dwf.framework/dwf
 Then create a virtualenv and install this project:
 
 ```bash
-cd /Users/nils/Documents/GitHub/ITRL/svea-ad3-sbus-rc
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -e .
@@ -140,4 +139,3 @@ svea-ad3-sbus-verify --help
 svea-ad3-dio-test --help
 svea-ad3-dwf-diag
 ```
-
